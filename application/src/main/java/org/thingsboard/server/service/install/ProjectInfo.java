@@ -16,17 +16,14 @@
 package org.thingsboard.server.service.install;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.boot.info.BuildProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
 public class ProjectInfo {
 
-    private final BuildProperties buildProperties;
-
     public String getProjectVersion() {
-        return buildProperties.getVersion().replaceAll("[^\\d.]", "");
+        return "4.3.0";
     }
 
     public String getProductType() {
